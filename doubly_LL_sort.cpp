@@ -27,7 +27,7 @@ int main()
 	int n,c;
     display(head);
 	do
-	{       cout<<"\n*********************************\n";
+	{       cout<<"\n*******************))))**************\n";
 
 		cout<<"\n\n\n enter your choice \n 1:insert. \n 2.accept at a particular position \n 3.delete from a particular postion. \n 4.display sort. \n 5.sort \n 0.exit.";
 		cin>>c;
