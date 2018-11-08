@@ -101,56 +101,42 @@ int main()
                     ptr=nextptr;
                     nextptr=nextptr->next;// move both pointers ahead
                 }
-                 cout<<"\n tttttttttttttttt  befor while:::: end"<<end1->data;
+
                   while(ptr->next!=last)
                         {
                          cout<<"\n ;;;"<<ptr->data;
                          cout<<"\n ;;;]]]"<<nextptr->data;
                          cout<<"\n ;;;]]]___"<<ptr->prev->data;
                     if(ptr->data>nextptr->data )
-                    {   cout<<"\n....";
-                        ptr->prev->next=nextptr;
-                        nextptr->next->prev=ptr;
+                        {   cout<<"\n....";
+                            ptr->prev->next=nextptr;
+                            nextptr->next->prev=ptr;
 
-                        nextptr->prev=ptr->prev;
-                        ptr->next=nextptr->next;
+                            nextptr->prev=ptr->prev;
+                            ptr->next=nextptr->next;
 
-                        ptr->prev=nextptr;
-                        nextptr->next=ptr;
-
-
-
-                         ptr=nextptr;
-                         nextptr=nextptr->next;//to move ptr back anf move nextptr ahead and get them in seq ptr n then nextptr
+                            ptr->prev=nextptr;
+                            nextptr->next=ptr;
 
 
-                        cout<<"\n before"<<ptr->data;
-                         cout<<"\n ;;;]]],cccc,,"<<nextptr->data;
 
-                         ptr=nextptr;
-                         nextptr=nextptr->next;// move both pointers ahead
-
-
-                         cout<<"\n aftter"<<ptr->data;
-                         cout<<"\n ;;;]]],cccc,,"<<nextptr->data;
-
-                    }else
-                    {   cout<<"\n  move both pointers ahead";
-                         ptr=nextptr;
-                         nextptr=nextptr->next;// move both pointers ahead
+                             ptr=nextptr;
+                             nextptr=nextptr->next;//to move ptr back anf move nextptr ahead and get them in seq ptr n then nextptr
+                             ptr=nextptr;
+                             nextptr=nextptr->next;// move both pointers ahead
+                             cout<<"\n aftter"<<ptr->data;
+                             cout<<"\n ;;;]]],cccc,,"<<nextptr->data;
+                        }else
+                        {   cout<<"\n  move both pointers ahead";
+                             ptr=nextptr;
+                             nextptr=nextptr->next;// move both pointers ahead
+                        }
                     }
-                         cout<<"\n ;;;"<<ptr->data;
-                         cout<<"\n ;;;]]],cccc,,"<<nextptr->data;
-
-                    }
-                    cout<<"\n tttttttttttttttt  befor while:::: end"<<end1->data;
-
                     cout<<"\n ;;;"<<ptr->data;
                          cout<<"\n ;;;]]],,,"<<nextptr->data;
 
                     if(nextptr->next==NULL && end1==last)
                     {
-
                         if(ptr->data>nextptr->data)
                          {
                              ptr->prev->next=nextptr;
@@ -189,7 +175,6 @@ int main()
                     cout<<currnode->data<<"  ";
                     currnode=currnode->prev;
                 }
-
             }
 		}
 
