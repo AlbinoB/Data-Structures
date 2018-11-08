@@ -28,7 +28,7 @@ int main()
 	do
 	{       cout<<"\n*********************************\n";
 
-		cout<<"\n\n\n enter your choice \n 1:insert. \n 2.accept at a particular position \n 3.delete from a particular postion. \n 4.display sort. \n 0.exit.";
+		cout<<"\n\n\n enter your choice \n 1:insert. \n 2.insert at a particular position \n 3.delete from a particular postion. \n 4.display sort. \n 0.exit.";
 		cin>>c;
 		switch(c)
 		{
@@ -138,8 +138,8 @@ int main()
 	}
 
    node* insert_position(node *last){
-        /* int pos;
-        node *temp=last;
+         int pos;
+        node *temp=last->next;
         cout<<"\n enter the position to be inserted:";
         cin>>pos;
             node *a;
@@ -149,24 +149,37 @@ int main()
 			a->next=NULL;
         if(pos==1)
         {
-            a->next=last;
-			last=a;
+            a->next=last->next;
+			last->next=a;
 
         }else
             {
                 if(pos<=count1+1){
+
                 for(int i=1;i<pos-1;i++)
                 {
                     temp=temp->next;
                 }
-                a->next=temp->next;
-                temp->next=a;
-                }
-                else
+                if(pos==count1+1)
                 {
+                      a->next=last->next;
+                      temp->next=a;
+                      last=a;
+
+                }
+                else {
+
+                      a->next=temp->next;
+                      temp->next=a;
+                    }
+                }
+                else{
+
+
                     cout<<"\n position out of bound!!!";
+
                 }
             }
-            */
+
         return last;
     }
